@@ -17,12 +17,12 @@ bun dev
 
 ### 사전 준비
 1. 데이터 베이스 사용을 위해 pocketbase 프로그램 다운로드(https://pocketbase.io/docs/)
-![Alt text](image.png)
+![image](https://github.com/bongseoksa/nextjs-app2/assets/22609200/c96d45e8-cf5c-4264-9b72-2570bae55c9f)
 2. 다운받은 파일에서 pocketbase.exe 파일을 본 프로젝트 root에 복사 & pocketbase 실행
-![Alt text](image-1.png)
-![Alt text](image-4.png)
+![image-1](https://github.com/bongseoksa/nextjs-app2/assets/22609200/f54638fa-de73-4886-9229-54c439720a0f)
+![image-4](https://github.com/bongseoksa/nextjs-app2/assets/22609200/088f0a61-77f8-497b-a180-14937791178a)
 3. pocketbase 로그인 & DB 세팅
-![Alt text](image-3.png)
+![image-3](https://github.com/bongseoksa/nextjs-app2/assets/22609200/7b2a0b4c-fb8b-4c5b-85d1-52ad288c0754)
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
