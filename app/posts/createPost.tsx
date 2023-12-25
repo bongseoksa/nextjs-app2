@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from "react"
+import { useRouter } from "next/navigation";
 
 export const CreatePost =  () => {
     const [title, setTitle] = useState<string>('');
+    const router = useRouter();
 
     /** Post 생성 API 요청 */
     const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
@@ -15,6 +17,7 @@ export const CreatePost =  () => {
             body: JSON.stringify({title})
         });
         setTitle('');
+        router.refresh();
     }
 
   return (
