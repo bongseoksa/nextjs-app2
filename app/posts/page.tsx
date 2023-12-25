@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Link from 'next/link';
+import CreatePost from './createPost';
 
 /** Post 데이터 가져오기 */
 async function getPost() {
@@ -20,6 +21,7 @@ const posts = await getPost();
         {posts?.map((post)=> {
             return <PostItem key={post.id} post={post}/>
         })}
+        <CreatePost />
     </div>
   )
 }
