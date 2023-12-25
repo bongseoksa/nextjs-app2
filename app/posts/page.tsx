@@ -1,12 +1,19 @@
 
 import React from 'react'
 import Link from 'next/link';
+import CreatePost from './createPost';
 
 /** Post 데이터 가져오기 */
 async function getPost() {
     const res = await fetch(`http://127.0.0.1:8090/api/collections/posts/records`, {
         cache: 'no-store',
     });
+
+    // 에러 발생시 자동으로 에러 페이지로 이동
+    if(!res.ok) {
+        // 현재 파일 기준에서 가장 가까이 있는 error.js 파일 activated
+        throw new Error(`failed to fetch data`);
+    }
 
     const data = await res.json();
     return data?.items as any[];
@@ -20,6 +27,7 @@ const posts = await getPost();
         {posts?.map((post)=> {
             return <PostItem key={post.id} post={post}/>
         })}
+        <CreatePost />
     </div>
   )
 }
